@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.toast{
+  height: 50px;
+  width: 300px;
+  background-color: rgb(92, 51, 22);
+}
+
+.gameboard {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: rgb(92, 51, 22);
+  border-radius: 3px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgb(37, 16, 1);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.inner {
+  width: 90px;
+  height: 90px;
+  border: 3px solid wheat;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.message {
+  font-family: 'Gill Sans';
+}
+
+.marshmellow {
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  border: 20px;
+}
+
+.strawberry {
+  
 }
