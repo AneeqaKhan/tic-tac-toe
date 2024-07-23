@@ -1,26 +1,44 @@
 import React from "react";
 
-const Cell = ({ cell, id, go, setGo }) => {
+const Cell = ({ cell, id, go, setGo, cells, setCells, winningMsg }) => {
   const handleClick = (e) => {
-    const taken =
-      e.target.firstChild.classList.contains("marshmellow") ||
-      e.target.firstChild.classList.contains("strawberry");
-
-      if(!taken) {
-        if(go === "marshmellow") {
-            e.target.firstChild.classList.add("marshmellow")
-            setGo("strawberry")
+    if (!winningMsg) {
+      const firstChild = e.target.firstChild;
+      if (firstChild) {
+        const taken =
+          firstChild.classList.contains("marshmellow") ||
+          firstChild.classList.contains("strawberry");
+        if (!taken) {
+          if (go === "marshmellow") {
+            firstChild.classList.add("marshmellow");
+            handleCellChange("marshmellow");
+            setGo("strawberry");
+          } else if (go === "strawberry") {
+            firstChild.classList.add("strawberry");
+            handleCellChange("strawberry");
+            setGo("marshmellow");
+          }
         }
-        if(go === "strawberry") {
-            e.target.firstChild.classList.add("strawberry")
-            setGo("marshmellow")
-        }
+      } else {
+        console.error("First child is not found");
       }
+    }
+  };
+
+  const handleCellChange = (className) => {
+    const nextCells = cells.map((cell, index) => {
+      if (index === id) {
+        return className;
+      } else {
+        return cell;
+      }
+    });
+    setCells(nextCells);
   };
 
   return (
     <div className="square" id={id} onClick={handleClick}>
-      <div className="inner">{cell}</div>
+      <div className={cell}></div>
     </div>
   );
 };

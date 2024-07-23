@@ -34,14 +34,7 @@
   align-items: center;
   cursor: pointer;
   border-radius: 3px;
-}
-
-.inner {
-  width: 90px;
-  height: 90px;
-  border: 3px solid wheat;
-  border-left: 0;
-  border-bottom: 0;
+  box-shadow: 3px 3px 0px 0px wheat inset;
 }
 
 .message {
@@ -51,10 +44,17 @@
 .marshmellow {
   height: 70px;
   width: 70px;
-  background-color: white;
+  background-color: inherit;
   border: 20px;
+  background-image: url("./asset/marshmallow.png");
+  background-size: cover; 
 }
 
 .strawberry {
-  
+  height: 70px;
+  width: 70px;
+  background-color: inherit;
+  border: 20px;
+  background-image: url("./asset/strawberry.png");
+  background-size: cover; 
 }
