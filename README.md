@@ -23,21 +23,21 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the repository:**
 
-   ```sh
-   git clone https://github.com/your-username/tic-tac-toe.git
-   ```
+```sh
+git clone https://github.com/your-username/tic-tac-toe.git
+```
 
 2. **Navigate to the project directory:**
 
-   ```sh
-   cd tic-tac-toe
-   ```
+```sh
+cd tic-tac-toe
+```
 
 3. **Install the dependencies:**
 
-  ```sh
-   npm install
-   ```
+```sh
+npm install
+```
 
 4. **Start the development server:**
  
@@ -65,8 +65,15 @@ Contributions are welcome! Please fork the repository and create a pull request 
 5. Open a Pull Request
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ## Acknowledgements
-- (Code with Ania Kubów)[https://www.youtube.com/watch?v=ZF4hD1ffitU&t=997s&ab_channel=CodewithAniaKub%C3%B3w]
-- (Florin Pop)[https://www.youtube.com/watch?v=8GPPJpiLqHk&t=1585s&ab_channel=FlorinPop]
+
+- [Code with Ania Kubów](https://www.youtube.com/watch?v=ZF4hD1ffitU&t=997s&ab_channel=CodewithAniaKub%C3%B3w)
+- [Florin Pop](https://www.youtube.com/watch?v=8GPPJpiLqHk&t=1585s&ab_channel=FlorinPop)
+
+## Demo
+
+[Link](https://tic-tac-deara95nd-aneeqakhans-projects.vercel.app/)
+
