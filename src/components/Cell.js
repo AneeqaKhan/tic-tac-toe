@@ -4,23 +4,19 @@ const Cell = ({ cell, id, go, setGo, cells, setCells, winningMsg }) => {
   const handleClick = (e) => {
     if (!winningMsg) {
       const firstChild = e.target.firstChild;
-      if (firstChild) {
-        const taken =
-          firstChild.classList.contains("marshmellow") ||
-          firstChild.classList.contains("strawberry");
-        if (!taken) {
-          if (go === "marshmellow") {
-            firstChild.classList.add("marshmellow");
-            handleCellChange("marshmellow");
-            setGo("strawberry");
-          } else if (go === "strawberry") {
-            firstChild.classList.add("strawberry");
-            handleCellChange("strawberry");
-            setGo("marshmellow");
-          }
+      const taken =
+        firstChild?.classList.contains("marshmallow") ||
+        firstChild?.classList.contains("strawberry");
+      if (!taken) {
+        if (go === "marshmallow") {
+          firstChild.classList.add("marshmallow");
+          handleCellChange("marshmallow");
+          setGo("strawberry");
+        } else if (go === "strawberry") {
+          firstChild.classList.add("strawberry");
+          handleCellChange("strawberry");
+          setGo("marshmallow");
         }
-      } else {
-        console.error("First child is not found");
       }
     }
   };

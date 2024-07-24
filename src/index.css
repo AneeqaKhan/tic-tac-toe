@@ -39,9 +39,12 @@
 
 .message {
   font-family: 'Gill Sans';
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.marshmellow {
+.marshmallow {
   height: 70px;
   width: 70px;
   background-color: inherit;
@@ -57,4 +60,25 @@
   border: 20px;
   background-image: url("./asset/strawberry.png");
   background-size: cover; 
+}
+
+.restartIcon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.makeRain {
+  position: fixed;
+  top: -1vh;
+  font-size: 2rem;
+  transform: translateY(0);
+  animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(105vh);
+  }
 }
